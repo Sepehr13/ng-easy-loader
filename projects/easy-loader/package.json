@@ -1,0 +1,35 @@
+{
+  "name": "@sepehrazizi/ng-easy-loader",
+  "version": "0.1.0",
+  "description": "Easy to use http request loading indicator for your Angular app.",
+  "author": {
+    "name": "Sepehr Azizi",
+    "email": "sepehrazizi13@gmail.com",
+    "url": "https://sepehr-azizi.netlify.app/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sepehr13/ng-easy-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sepehr13/ng-easy-loader/issues"
+  },
+  "homepage": "https://github.com/Sepehr13/ng-easy-loader",
+  "keywords": [
+    "angular",
+    "http",
+    "ui",
+    "loader",
+    "annotation",
+    "typescript"
+  ],
+  "license": "GPL-3.0-only",
+  "peerDependencies": {
+    "@angular/common": "^17.3.0",
+    "@angular/core": "^17.3.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

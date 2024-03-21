@@ -96,6 +96,39 @@
           }
         }
       }
+    },
+    "easy-loader": {
+      "projectType": "library",
+      "root": "projects/easy-loader",
+      "sourceRoot": "projects/easy-loader/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/easy-loader/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/easy-loader/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/easy-loader/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/easy-loader/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   }
 }
