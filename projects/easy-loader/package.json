@@ -1,6 +1,6 @@
 {
   "name": "@sepehrazizi/ng-easy-loader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Easy to use http request loading indicator for your Angular app.",
   "author": {
     "name": "Sepehr Azizi",

@@ -10,7 +10,7 @@ This loader mostly is used when you want to show a progress indicator to user wh
 Then add this one little piece of code to your http request function in your service file.
 **Keep in mind** it is recommended that the service function returns **Observable** or **Promise**
 
-![simple use](https://github.com/Sepehr13/ng-easy-loader/assets/21054209/86d76364-a2cc-416b-a584-808701d5876d)
+![simple use](https://github.com/Sepehr13/ng-easy-loader/assets/21054209/482cbf08-fb15-4bb0-a507-3aa2045e987c)
 
 ### What if i want to show my own progress indicator in my own way?
 
