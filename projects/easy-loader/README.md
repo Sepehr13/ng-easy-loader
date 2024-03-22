@@ -6,7 +6,8 @@ This loader mostly is used when you want to show a progress indicator to user wh
 
 ## How to use it?
 
-**Very Simple!** Just add this one little piece of code to your http request function in your service file.
+**Very Simple!** First import `EasyLoaderComponent` and wrap the most top-level html element (mostly located in **app.component.html**) with `<easy-loader-wrapper></easy-loader-wrapper>`. 
+Then add this one little piece of code to your http request function in your service file.
 **Keep in mind** it is recommended that the service function returns **Observable** or **Promise**
 
 ![simple use](https://github.com/Sepehr13/ng-easy-loader/assets/21054209/86d76364-a2cc-416b-a584-808701d5876d)
