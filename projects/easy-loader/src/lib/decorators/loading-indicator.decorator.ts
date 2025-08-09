@@ -28,7 +28,7 @@ export function WithEasyLoader(showLoadingIndicator: boolean = true) {
                     if (rewriteState.length > 0) {
                         rewriteState = rewriteState.map(m => {
                             let slug = `${m}:${generateUUID()}`;
-                            if(showLoadingIndicator) slug += '*';
+                            if (showLoadingIndicator) slug += '*';
                             return slug
                         });
                         store?.deletePendingSlugs(functionNameSafe);
@@ -36,28 +36,28 @@ export function WithEasyLoader(showLoadingIndicator: boolean = true) {
                         multi = true;
                     } else {
                         slug = `${functionNameSafe}:${generateUUID()}`;
-                        if(showLoadingIndicator) slug += '*';
+                        if (showLoadingIndicator) slug += '*';
                         store?.addSlug(slug);
                     }
                 } else {
                     slug = `${functionNameSafe}:${generateUUID()}`;
-                    if(showLoadingIndicator) slug += '*';
+                    if (showLoadingIndicator) slug += '*';
                     store?.addSlug(slug);
                 }
             });
-            
+
             const result = originalMethod.apply(this, args);
 
             if (isObservable(result)) {
                 return result.pipe(
-                finalize(() => {
-                    if (multi) {
-                        store?.deleteFinishedSlugs(rewriteState);
-                    } else {
-                        store?.deleteSlug(slug);
-                    }
-                })
-            );
+                    finalize(() => {
+                        if (multi) {
+                            store?.deleteFinishedSlugs(rewriteState);
+                        } else {
+                            store?.deleteSlug(slug);
+                        }
+                    })
+                );
             } else if (result instanceof Promise) {
                 return result.finally(() => {
                     if (multi) {
@@ -74,27 +74,15 @@ export function WithEasyLoader(showLoadingIndicator: boolean = true) {
                 }
                 return result;
             }
-            
+
         };
     };
 }
 
 function generateUUID() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-    const r = (Math.random() * 16) | 0,
-      v = c === 'x' ? r : (r & 0x3) | 0x8;
-    return v.toString(16);
-  });
-}
-
-function generateId(length: number = 8): string {
-  let result = '';
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  const charactersLength = characters.length;
-  let counter = 0;
-  while (counter < length) {
-    result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    counter += 1;
-  }
-  return result;
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        const r = (Math.random() * 16) | 0,
+            v = c === 'x' ? r : (r & 0x3) | 0x8;
+        return v.toString(16);
+    });
 }
