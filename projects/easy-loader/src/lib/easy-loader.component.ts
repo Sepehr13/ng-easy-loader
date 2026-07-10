@@ -3,13 +3,12 @@ import { EasyLoaderService } from './easy-loader.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'easy-loader-wrapper',
-  standalone: true,
-  imports: [CommonModule],
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: 'easy-loader.component.html',
-  styleUrl: 'easy-loader.component.scss',
+    selector: 'easy-loader-wrapper',
+    imports: [CommonModule],
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    templateUrl: 'easy-loader.component.html',
+    styleUrl: 'easy-loader.component.scss'
 })
 export class EasyLoaderComponent implements OnInit {
 

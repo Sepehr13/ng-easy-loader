@@ -6,11 +6,10 @@ import { ActionButton, BindTo, EasyLoaderComponent } from 'easy-loader';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, JsonPipe, EasyLoaderComponent, AsyncPipe],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    imports: [RouterOutlet, JsonPipe, EasyLoaderComponent, AsyncPipe],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
   title = 'easy-loader-project';
