@@ -1,9 +1,13 @@
-<easy-loader-wrapper>
-  <h1>{{title | json}}</h1>
+<easy-loader-wrapper
+  indicatorAsset="assets/loading.gif"
+  [indicatorWidth]="150"
+  [indicatorHeight]="150"
+>
+  <h1>{{ title | json }}</h1>
   <h3>Loader 1: {{ isLoading1$ | async }}</h3>
   <h3>Loader 2: {{ isLoading2$ | async }}</h3>
-  <br><br><br><br><br><br><br>
+  <br /><br /><br /><br /><br /><br /><br />
   <button (click)="loadData1()">Button 1</button>
-  <br>
+  <br />
   <button (click)="loadData2()">Button 2</button>
 </easy-loader-wrapper>

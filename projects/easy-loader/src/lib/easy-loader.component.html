@@ -1,8 +1,21 @@
 <div class="full-screen">
-    <ng-content></ng-content>
-        <div [ngClass]="{'visible': showUiBlocker}" class="ui-blocker">
-            <div class="loadingio-spinner-dual-ring-8qdqy07a6da"><div class="ldio-773d9pxsmyp">
-                <div></div><div><div></div></div>
-                </div></div>
+  <ng-content></ng-content>
+  <div [ngClass]="{ visible: showUiBlocker }" class="ui-blocker">
+    @if (!indicatorAsset) {
+      <div class="loadingio-spinner-dual-ring-8qdqy07a6da">
+        <div class="ldio-773d9pxsmyp">
+          <div></div>
+          <div><div></div></div>
         </div>
+      </div>
+    } @else {
+      <img
+        [ngSrc]="indicatorAsset!"
+        [width]="indicatorWidth"
+        [height]="indicatorHeight"
+        alt="Indicator Image Alt"
+        priority
+      />
+    }
+  </div>
 </div>

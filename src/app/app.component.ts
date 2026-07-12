@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, JsonPipe, EasyLoaderComponent, AsyncPipe],
+    imports: [JsonPipe, EasyLoaderComponent, AsyncPipe],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })
