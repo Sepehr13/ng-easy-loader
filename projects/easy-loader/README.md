@@ -10,7 +10,7 @@ This loader mostly is used when you want to show a progress indicator to user wh
 Then add this one little piece of code to your http request function in your service file.
 **Keep in mind** it is recommended that the service function returns **Observable** or **Promise**
 
-###Some useful input properties for `<easy-loader-wrapper>`
+### Some useful input properties for `<easy-loader-wrapper>`
 | Input    | Description | Usage |
 | -------- | ------- |  ------- |
 | indicatorAsset  | Use your custom gif as loading indicator    | indicatorAsset="assets/loading.gif"    |
